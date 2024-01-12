@@ -1,0 +1,31 @@
+# Jupyter Notebooks
+*.ipynb_checkpoints/
+*.ipynb_metadata
+
+# Jupyter environment
+/.venv/
+/__pycache__/
+
+# Jupyter workspace and settings
+/.vscode/
+/.idea/
+
+# Kernel-specific settings
+*.pyc
+
+# Temporary files
+.ipynb_temp/
+.ipynb_export/
+
+# Jupyter log files
+jupyter-*.log
+
+# nbconvert configuration file
+jupyter_notebook_config.py
+
+# Jupyter-paired files
+*.ipynb_meta.json
+
+# Jupyter widgets data files
+ipynb_checkpoints/
+
