@@ -5,7 +5,7 @@ from itertools import product
 
 class SetTheory:
     
-    def __init__(self, setA:list = None, setB:list = None, setNameA:str='SetA', setNameB:str='SetB' ,bold_pairs=None):
+    def __init__(self, setA:list = None, setB:list = None, bold_pairs=None, setNameA:str='SetA', setNameB:str='SetB'):
         
         """
         Initialize a SetTheory Instance
@@ -27,8 +27,9 @@ class SetTheory:
     def create_dataframe(self):
         cartesian_product = product(self.setA, self.setB)
         
-        # 
-        self.df = pd.DataFrame(cartesian_product, columns = [self.setNameA, self.setNameB])
+        # Check if the dataframe has already been created, if not create one
+        if self.df == None:
+            self.df = pd.DataFrame(cartesian_product, columns = [self.setNameA, self.setNameB])
         
         # Create the Ordered Pairs based one the values from the cartesian product
         self.df["Ordered Pair"] = self.df.apply(lambda row: (row[self.setNameA],row[self.setNameB]), axis=1)
